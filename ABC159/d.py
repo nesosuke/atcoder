@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+# わ～～～～～からんですわ～～～～～～～
 N = int(input())
 A = list(input().split())
 SolCnt = 0
