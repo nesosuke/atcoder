@@ -15,5 +15,5 @@ for i in range(n):
     if h_comp[i] != "Bad":
         count += 1
 
-print(h_comp)
+#print(h_comp)
 print(count)
