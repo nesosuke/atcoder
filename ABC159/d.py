@@ -1,20 +1,13 @@
 #!/usr/bin/python3
 # わ～～～～～からんですわ～～～～～～～
+from collections import Counter
 N = int(input())
 A = list(input().split())
-SolCnt = 0
-for i in range(N):
-    print(i)
-    for j in range(N-i+1):
-        if j != i :
-            for p in range(N-j+1):
-                print("i, j, p", A[i],A[j],A[p])
-                #if A[j] == A[p]:
-                #    SolCnt += 1
-            
-#        if A[i] == A[j]:
-
-       
-#        print(A[0:j])
-#        print(A[j+1::])
-    print(SolCnt)
+for k in range(N):
+    ans = 0
+    A_copy=sorted(A)
+    A_copy.remove(A[k])
+    c = Counter(A_copy) #dict
+    for l in c.keys():
+       ans+= ( c[l] * (c[l]-1) ) / 2 
+    print(int(ans))
